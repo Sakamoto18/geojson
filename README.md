@@ -92,3 +92,4 @@
 ``` 
 
 详情请看 [geojson-基础绘制属性解析](https://segmentfault.com/a/1190000037611134/).
+可视化数据生成工具地址 [geojson工具](http://geojson.io/#map=3/42.81/54.14).
