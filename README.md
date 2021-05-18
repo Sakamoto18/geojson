@@ -2,50 +2,57 @@
 
 > geojson 地图数据学习
 > 基本结构
-    { // 可以包括点线面, 一个大的集合
-        "type": "FeatureCollection", // 定义这个是个geojson文件, 这里还可以是其他值下面会说
-        "features": [] // 这里放要绘制的数据
-    }
+```
+{ // 可以包括点线面, 一个大的集合
+    "type": "FeatureCollection", // 定义这个是个geojson文件, 这里还可以是其他值下面会说
+    "features": [] // 这里放要绘制的数据
+}
+```
 > 描述多个点(FeatureCollection)
-    {
-        "type": "FeatureCollection",
-        "features": [
-                {
-                "type": "Feature",
-                "properties": {},
-                "geometry": {
-                    "type": "MultiPoint", // 多点, 也就是连续画多个同样的点
-                    "coordinates": [[105.380859375, 31.57853542647338],
-                        [105.580859375, 31.52853542647338]
-                    ]
-                }
-            },
-        ]
-    }
+```
+{
+    "type": "FeatureCollection",
+    "features": [
+            {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "MultiPoint", // 多点, 也就是连续画多个同样的点
+                "coordinates": [[105.380859375, 31.57853542647338],
+                    [105.580859375, 31.52853542647338]
+                ]
+            }
+        },
+    ]
+}
+```
 > 描述一条线(LineString)，多个点会连在一起形成一条线
 > 描述一个面(Polygon, 也叫多边形)
-    {
-        "type": "FeatureCollection",
-        "features": [
-            {
-                "type": "Feature",
-                "properties": {},
-                "geometry": {
-                    "type": "Polygon", // 注意这里是三维数组
-                    "coordinates": [
-                        [
-                            [106.10595703125, 33.33970700424026],
-                            [106.32568359375, 32.41706632846282],
-                            [108.03955078125, 32.2313896627376],
-                            [108.25927734375, 33.15594830078649],
-                            [106.10595703125, 33.33970700424026]
-                        ]
+```
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "Polygon", // 注意这里是三维数组
+                "coordinates": [
+                    [
+                        [106.10595703125, 33.33970700424026],
+                        [106.32568359375, 32.41706632846282],
+                        [108.03955078125, 32.2313896627376],
+                        [108.25927734375, 33.15594830078649],
+                        [106.10595703125, 33.33970700424026]
                     ]
-                }
-            },
-        ]
-    }
+                ]
+            }
+        },
+    ]
+}
+```
 > 描述一个组(geometries)
+```
 {
     "type": "FeatureCollection",
     "features": [
@@ -65,7 +72,9 @@
         }
     ]
 }
+```
 > 不同的样式(properties)
+```
 {
     "type": "FeatureCollection",
     "features": [
@@ -85,7 +94,7 @@
         }
     ]
 }
-
+```
 
 ## Build Setup
 ``` 教程地址
